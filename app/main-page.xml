@@ -1,0 +1,40 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <TabView id="tabViewContainer" selectedIndex="{{index}}" loaded="loadedTabView">
+      <TabView.items>
+          <TabViewItem title="Tab 1">
+              <TabViewItem.view>
+                  <Label text="This is Label in Tab 1" />
+              </TabViewItem.view>
+          </TabViewItem>
+          <TabViewItem title="Tab 2">
+              <TabViewItem.view>
+                  <GridLayout>
+                      <ListView items="{{ source }}"  loaded="onLoaded" itemLoading="onItemLoading" itemTap="onItemTap">
+                          <ListView.itemTemplate>
+                              <StackLayout>
+                                  <Label text="{{title}}" textWrap="true" />
+                              </StackLayout>
+                          </ListView.itemTemplate>
+                      </ListView>
+                  </GridLayout>
+              </TabViewItem.view>
+          </TabViewItem>
+           <TabViewItem title="Tab 3">
+              <TabViewItem.view>
+                  <Label text="This is Label in Tab 3" />
+              </TabViewItem.view>
+          </TabViewItem>
+           <TabViewItem title="Tab 4">
+              <TabViewItem.view>
+                  <Label text="This is Label in Tab 4" />
+              </TabViewItem.view>
+          </TabViewItem>
+           <TabViewItem title="Tab 5">
+              <TabViewItem.view>
+                  <Label text="This is Label in Tab 5" />
+              </TabViewItem.view>
+          </TabViewItem>
+      </TabView.items>
+  </TabView>
+  
+</Page>
